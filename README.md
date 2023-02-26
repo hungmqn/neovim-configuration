@@ -1,4 +1,4 @@
-Neovim Configuration
+# Neovim Configuration
 
 ### Download the code
 
