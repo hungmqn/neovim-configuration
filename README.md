@@ -21,6 +21,13 @@ Copy-Item "D:\Workspace\Personal\neovim-configuration\init.lua" -Destination "~\
 Copy-Item -Path "D:\Workspace\Personal\neovim-configuration\lua" -Destination "~/AppData/Local/nvim/lua" -Recurse
 ```
 
+3. Save current settings to github repository.
+
+```powershell
+Copy-Item "~\AppData\Local\nvim\init.lua" -Destination "D:\Workspace\Personal\neovim-configuration\init.lua"
+Copy-Item -Path "~/AppData/Local/nvim/lua" -Destination "D:\Workspace\Personal\neovim-configuration\lua" -Recurse
+```
+
 ### MacOS / Linux
 
 1. Create new `nvim` folder if it doesn't exist.
@@ -34,4 +41,17 @@ mkdir ~/.config/nvim/
 ```zsh
 cp /Users/hungnguyen/Documents/Workspace/Personal/neovim-configuration/init.lua ~/.config/nvim/init.lua
 cp -R /Users/hungnguyen/Documents/Workspace/Personal/neovim-configuration/lua ~/.config/nvim/lua
+```
+
+3. Restore settings from github.
+
+```zsh
+cp /Users/hungnguyen/Documents/Workspace/Personal/neovim-configuration/init.lua ~/.config/nvim/init.lua
+cp -R /Users/hungnguyen/Documents/Workspace/Personal/neovim-configuration/lua/* ~/.config/nvim/lua/
+```
+
+4. Save current settings to github repository.
+
+```zsh
+cp -R ~/.config/nvim/* /Users/hungnguyen/Documents/Workspace/Personal/neovim-configuration/
 ```
