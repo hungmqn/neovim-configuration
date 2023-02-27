@@ -18,14 +18,14 @@ mkdir ~\AppData\Local\nvim\
 
 ```powershell
 Copy-Item "D:\Workspace\Personal\neovim-configuration\init.lua" -Destination "~\AppData\Local\nvim\init.lua"
-Copy-Item -Path "D:\Workspace\Personal\neovim-configuration\lua" -Destination "~/AppData/Local/nvim/lua" -Recurse
+Copy-Item -Path "D:\Workspace\Personal\neovim-configuration\lua\*" -Destination "~/AppData/Local/nvim/lua" -Recurse -Force
 ```
 
 3. Save current settings to github repository.
 
 ```powershell
 Copy-Item "~\AppData\Local\nvim\init.lua" -Destination "D:\Workspace\Personal\neovim-configuration\init.lua"
-Copy-Item -Path "~/AppData/Local/nvim/lua" -Destination "D:\Workspace\Personal\neovim-configuration\lua" -Recurse
+Copy-Item -Path "~/AppData/Local/nvim/lua" -Destination "D:\Workspace\Personal\neovim-configuration\lua" -Recurse -Force
 ```
 
 ### MacOS / Linux
