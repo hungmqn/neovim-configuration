@@ -98,3 +98,13 @@ irm get.scoop.sh | iex
 // Install ripgrep
 scoop install ripgrep
 ```
+
+2. For Windows, A C compiler is required to compile the parsers needed for `nvim-treesitter`. See [document](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support). If you don't have it, you will get `No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.` error message after open Neovim. Install one of C compilers will help resolve this problem. Notes: `nvim-treesitter` is required to run many plugins, if you just want to highlight or colorize the code, use some colorschema that support `nvim-treesitter` out of the box like `tokyonight`.
+
+```powershell
+scoop install zig
+```
+
+```powershell
+scoop install gcc
+```
