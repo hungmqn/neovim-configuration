@@ -114,3 +114,7 @@ scoop install gcc
 ```zsh
 npm install -g eslint prettier
 ```
+
+```powershell
+scoop install stylua
+```
