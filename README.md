@@ -118,3 +118,29 @@ npm install -g eslint prettier
 ```powershell
 scoop install stylua
 ```
+
+4. To support writing Rust, it requires [rust-analyzer](https://github.com/rust-lang/rust-analyzer) (language server for Rust) to be installed before adding it to mason's config.
+
+```zsh
+// Clone rust analyzer repository
+git clone git@github.com:rust-lang/rust-analyzer.git
+// Go to pulled repository
+cd rust-analyzer
+// Install rust-analyzer binary
+cargo xtask install --server
+```
+
+Get problem with the command? Rust having two ABIs on MSVC and the GNU. By default, Rust uses the MSVC ABI, which it was causing the `Error link.exe failed exit code 1`.
+It can be solved by below command.
+
+```zsh
+// Install GNU ABI
+rustup toolchain install stable-gnu
+// Change rust configuration
+rustup set default-host x86_64-pc-windows-gnu
+// or 
+rustup default stable-x86_64-pc-windows-gnu
+// Install the binary again
+cargo xtask install --server
+```
+
