@@ -9,10 +9,13 @@ local keymap = vim.api.nvim_set_keymap
 
 vim.g.copilot_no_tab_map = true
 vim.cmd[[imap <silent><script><expr> <C-a> copilot#Accept("<CR>")]] -- Accept suggestion
+vim.cmd[[imap <silent> <C-j> <Plug>(copilot-next)]] -- Next suggestion
+vim.cmd[[imap <silent> <C-k> <Plug>(copilot-previous)]] -- Previous suggestion
+vim.cmd[[imap <silent> <C-c> <Plug>(copilot-dismiss)]] -- Dismiss suggestion
 -- keymap("i", "<C-a>", ":copilot#Accept('\\<CR>')", { silent = true, expr = true } ) -- Accept suggestion -- THIS DOES NOT WORK 
 -- keymap("i", "<C-c>", "<Plug>(copilot-dismiss)", { silent = true, expr = true } ) -- Dismiss suggestion
--- keymap("i", "<A-]>", "<Plug>(copilot-next)", { silent = true, expr = true } ) -- Next suggestion
--- keymap("i", "<A-[>", "<Plug>(copilot-previous)", { silent = true, expr = true } ) -- Previous suggestion
+-- keymap("i", "<C-j>", "<Plug>(copilot-next)", { silent = true, expr = true } ) -- Next suggestion
+-- keymap("i", "<C-k>", "<Plug>(copilot-previous)", { silent = true, expr = true } ) -- Previous suggestion
 
 vim.cmd[[highlight CopilotSuggestion guifg=#ccbbaa ctermfg=8]]
 

@@ -57,7 +57,7 @@ return packer.startup(function(use)
 	use { "folke/which-key.nvim" }
 
   -- Copilot
-  use { "github/copilot.vim", branch = 'release' }
+  -- use { "github/copilot.vim", branch = 'release' }
 
 	-- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
